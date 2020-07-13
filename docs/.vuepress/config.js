@@ -97,8 +97,12 @@ module.exports = {
         link: "/components/blog/",
       },
       {
-        text: "JAVA",
-        link: "/components/java/",
+        text: "技术",
+        ariaLabel: "components Menu",
+        items: [
+          { text: "Java", link: "/components/java/", },
+          { text: "数据库", link: "/components/database/" }
+        ],
       },
       {
         text: "软考",
@@ -133,19 +137,24 @@ module.exports = {
     sidebar: {
       "/components/java": [
         {
-          title: "Java Web",
+          title: "Java",
           collapsable: false,
           children: [
             "/components/java/springBoot/",
-            "/components/java/redis/",
             "/components/java/tomcat/",
-          ],
-        },
+          ]
+        }
+      ],
+      "/components/database": [
         {
           title: "数据库",
           collapsable: false,
-          children: [],
-        },
+          children: [
+            "/components/database/mysql/",
+            "/components/database/mongodb/",
+            "/components/database/redis/",
+          ]
+        }
       ],
       "/components/note/": [""],
       "/components/itto/": [
